@@ -1,0 +1,21 @@
+services:
+  - type: worker
+    name: uybot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: CHANNEL_URL
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: ADMIN_CONTACT_URL
+        sync: false
+      - key: MODERATION_ENABLED
+        sync: false
+      - key: REQUIRE_SUBSCRIPTION
+        sync: false
